@@ -1,0 +1,90 @@
+.textOutlineStyle::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  width: 180%;
+  height: 170%;
+  transform: translate(-50%, -50%);
+  background-image: url('../../images/travelTwo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Changes for small devices only - larger image without any cropping */
+@media (max-width: 767px) {
+  .textOutlineStyle::before {
+    background-size: contain;
+    background-position: center;
+    width: 140%;
+    height: 140%;
+  }
+}
+
+.textOutlineStyle::after {
+  content: "SUSHIL";
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.textOutlineStyle {
+  overflow: visible;
+  line-height: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Force 2-line layout for small devices with larger container */
+@media (max-width: 767px) {
+  .smallDeviceText {
+    max-width: 350px;
+    word-spacing: 100px;
+    line-height: 0.85;
+  }
+}
+
+/* Responsive display classes */
+.firstDiv {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .firstDiv {
+    display: flex !important;
+  }
+}
+
+.thirdDiv {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .thirdDiv {
+    display: flex !important;
+  }
+}
+
+/* Responsive stroke width for better visibility */
+@media (min-width: 640px) {
+  .textOutlineStyle::after {
+    -webkit-text-stroke-width: 2px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .textOutlineStyle::after {
+    -webkit-text-stroke-width: 2.5px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .textOutlineStyle::after {
+    -webkit-text-stroke-width: 3px;
+  }
+}
