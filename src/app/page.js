@@ -76,7 +76,7 @@ const Home = () => {
         <section
           id="home"
           ref={heroRef}
-          className="h-[35vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] relative overflow-visible"
+          className="h-[35vh] sm:h-[45vh] md:h-[50vh] lg:h-[60vh] relative overflow-visible "
         >
           {/* Animated background with parallax */}
           <motion.div

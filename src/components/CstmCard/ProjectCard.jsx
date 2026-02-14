@@ -109,7 +109,7 @@ const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects,
         {/* LEFT PANEL: Main Visual */}
         <div
           className="lg:col-span-5 relative min-h-[30vh] lg:min-h-[600px] flex flex-col justify-between p-3 sm:p-4 lg:p-6"
-          style={{ backgroundColor: project.bgColor || 'white' }}
+          style={{ backgroundColor: project?.bgColor || 'white' }}
         >
           
           {/* Header / Watermark */}

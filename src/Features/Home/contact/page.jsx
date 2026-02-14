@@ -257,7 +257,7 @@ const ContactPage = () => {
 
       {/* 1. LEFT GUTTER (Logo Area) - Creates that specific 'left space' */}
       <motion.div
-        className="flex w-16 flex-col items-center border-r border-gray-100 py-10 md:w-24"
+        className="hidden md:flex w-16 flex-col items-center border-r border-gray-100 py-10 md:w-24"
         initial={{ opacity: 0, x: -20 }}
         animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
         transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}

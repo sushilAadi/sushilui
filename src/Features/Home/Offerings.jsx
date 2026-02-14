@@ -15,7 +15,7 @@ const PosterOfferings = () => {
   return (
     <motion.div
       ref={containerRef}
-      className="relative w-full bg-[#F0F0F0] text-black selection:bg-red-600 selection:text-white font-sans mx-auto"
+      className="relative w-full bg-[#F0F0F0] text-black selection:bg-red-600 selection:text-white font-sans mx-auto overflow-x-hidden lg:overflow-x-visible"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
