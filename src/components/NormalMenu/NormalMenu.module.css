@@ -1,8 +1,8 @@
 /* Menu Toggle Button */
 .menuToggle {
   position: fixed;
-  top: 2em;
-  right: 2em;
+  top: 1rem;
+  right: 1rem;
   width: 120px;
   height: 60px;
   background-color: #0f0f0f;
@@ -12,6 +12,8 @@
   transform-origin: right;
   cursor: pointer;
   z-index: 100;
+  pointer-events: auto;
+  box-sizing: border-box;
 }
 
 .menuToggle.opened {
@@ -284,8 +286,10 @@
   }
 
   .menuToggle {
-    top: 1.5em;
-    right: 1.5em;
+    top: 1rem;
+    right: 1rem;
+    width: 100px;
+    height: 50px;
   }
 
   .menuLogo {
@@ -327,25 +331,28 @@
 
 @media (max-width: 480px) {
   .menuToggle {
-    width: 100px;
-    height: 50px;
+    width: 90px;
+    height: 45px;
+    top: 0.75rem;
+    right: 0.75rem;
+    font-size: 11px;
   }
 
   .menuToggle.opened {
-    width: 50px;
+    width: 45px;
   }
 
   .menuToggleIcon {
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
   }
 
   .menuCopy {
-    left: 20px;
+    left: 18px;
   }
 
   .menuCopy p {
-    font-size: 10px;
+    font-size: 9px;
   }
 
   .col1,

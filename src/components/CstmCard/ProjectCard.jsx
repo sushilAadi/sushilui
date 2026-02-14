@@ -1,15 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ArrowRight, ArrowLeft, ExternalLink, MapPin, Layers } from 'lucide-react';
+import { ArrowRight, ArrowLeft, ExternalLink, MapPin, Layers, X } from 'lucide-react';
 import Image from "next/image";
 
-const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects }) => {
+const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects, onClose }) => {
   if (!project) return null;
   const [activeImage, setActiveImage] = useState(0);
   const [likeCount, setLikeCount] = useState(project.likes || 0);
   const [isLiked, setIsLiked] = useState(false);
   const [direction, setDirection] = useState(0);
 
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const scrollContainer = scrollContainerRef.current;
+    if (!scrollContainer) return;
+
+    const handleWheel = (e) => {
+      // Prevent background from scrolling
+      e.stopPropagation();
+    };
+
+    // Prevent background scrolling by disabling scrolling on document element
+    // Instead of overflow hidden which hides fixed elements
+    const originalScroll = window.scrollY;
+    const preventScroll = (e) => {
+      if (e.target !== scrollContainer && !scrollContainer.contains(e.target)) {
+        window.scrollTo(0, originalScroll);
+      }
+    };
+    
+    window.addEventListener('scroll', preventScroll);
+    scrollContainer.addEventListener('wheel', handleWheel);
+
+    // Cleanup function to restore scrolling when the component unmounts
+    return () => {
+      window.removeEventListener('scroll', preventScroll);
+      scrollContainer.removeEventListener('wheel', handleWheel);
+    };
+  }, []); // Empty dependency array ensures this runs only on mount and unmount
+ 
   const handleLike = () => {
     setIsLiked(!isLiked);
     setLikeCount(prev => isLiked ? prev - 1 : prev + 1);
@@ -58,21 +88,29 @@ const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects 
       opacity: 0
     }
   };
+  console.log("project",project)
 
   return (
-    <motion.div
-      className="w-full min-h-full bg-white"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
-    >
+    <div className="w-full min-h-full bg-white relative">
+      <motion.button
+        onClick={onClose}
+        className="absolute top-4 right-4 z-20 bg-black text-white rounded-full p-2 flex items-center justify-center hover:bg-red-600 transition-colors"
+        whileHover={{ scale: 1.1, rotate: 90 }}
+        whileTap={{ scale: 0.9, rotate: 0 }}
+      >
+        <X size={20} />
+      </motion.button>
 
       {/* Main Container - Responsive Grid */}
-      <div className="bg-white grid grid-cols-1 lg:grid-cols-12 w-full min-h-full lg:rounded-lg lg:max-h-[90vh]">
+      <div
+        className="bg-white grid grid-cols-1 lg:grid-cols-12 w-full min-h-full lg:rounded-lg"
+      >
 
         {/* LEFT PANEL: Main Visual */}
-        <div className="lg:col-span-5 relative bg-white min-h-[30vh] lg:min-h-[600px] flex flex-col justify-between p-3 sm:p-4 lg:p-6">
+        <div
+          className="lg:col-span-5 relative min-h-[30vh] lg:min-h-[600px] flex flex-col justify-between p-3 sm:p-4 lg:p-6"
+          style={{ backgroundColor: project.bgColor || 'white' }}
+        >
           
           {/* Header / Watermark */}
           <div className="flex justify-between items-start z-10">
@@ -358,7 +396,7 @@ const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects 
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 

@@ -56,7 +56,8 @@ export const allProjects = [
     developmentType: 'Frontend',
     gridArea: 'span 1 / span 1',
     client:"India",
-    map:"image url"
+    map:"image url",
+    bgColor:"#000002"
   },
   {
     id: '04',

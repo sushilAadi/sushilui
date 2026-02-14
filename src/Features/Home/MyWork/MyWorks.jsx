@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, useDragControls, useInView } from 'framer-motion';
+import { motion, AnimatePresence, useInView } from 'framer-motion';
+import { Drawer } from "vaul";
 import { createPortal } from 'react-dom';
 import { allProjects } from '@/utils/mywork';
 import ProjectCard from '@/components/CstmCard/ProjectCard';
@@ -39,23 +40,40 @@ const cardVariants = {
 export default function MyWorks() {
   const [selectedId, setSelectedId] = useState(null);
   const [currentProjectIndex, setCurrentProjectIndex] = useState(0);
-  const dragControls = useDragControls();
   const gridRef = useRef(null);
   const isInView = useInView(gridRef, { once: true, margin: "-100px" });
 
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+
+    const lenis = window.lenis;
+
     if (selectedId) {
-      document.body.classList.add('overflow-hidden');
-      // Set the current project index when a project is selected
+      // if (lenis) lenis.stop();  // Lenis is disabled
+      // Lock scroll position instead of using overflow: hidden
+      const scrollPosition = window.scrollY;
+      const preventScroll = () => window.scrollTo(0, scrollPosition);
+      window.addEventListener('scroll', preventScroll);
       const index = allProjects.findIndex(p => p.id === selectedId);
       if (index !== -1) {
         setCurrentProjectIndex(index);
       }
+      // Store the prevent scroll function for cleanup
+      window._preventScrollFn = preventScroll;
     } else {
-      document.body.classList.remove('overflow-hidden');
+      // if (lenis) lenis.start();  // Lenis is disabled
+      if (window._preventScrollFn) {
+        window.removeEventListener('scroll', window._preventScrollFn);
+        delete window._preventScrollFn;
+      }
     }
+
     return () => {
-      document.body.classList.remove('overflow-hidden');
+      // if (lenis) lenis.start();  // Lenis is disabled
+      if (window._preventScrollFn) {
+        window.removeEventListener('scroll', window._preventScrollFn);
+        delete window._preventScrollFn;
+      }
     };
   }, [selectedId]);
 
@@ -81,6 +99,16 @@ export default function MyWorks() {
 
       {/* CSS for animated grid borders */}
       <style>{`
+        [data-vaul-drawer][data-vaul-drawer-direction="bottom"]::after {
+          background: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
         @keyframes borderGlowX {
           0% { background-position: -200% 0; }
           100% { background-position: 200% 0; }
@@ -192,100 +220,47 @@ export default function MyWorks() {
     </div>
 
     {/* Expanded View Overlay */}
-    <AnimatePresence>
-      {selectedId && (
-        <Portal>
-          <div className="fixed inset-0 z-50 lg:flex lg:items-center lg:justify-center">
-            {/* Backdrop */}
-            <motion.div
-              className="absolute inset-0 bg-black/70"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25 }}
-              onClick={() => setSelectedId(null)}
-            />
-
-            {/* Modal Container - Bottom sheet on mobile, centered on desktop */}
-            <motion.div
-              className="fixed bottom-0 left-0 right-0 lg:relative lg:bottom-auto lg:left-auto lg:right-auto w-full max-w-7xl lg:mx-auto h-[85vh] lg:h-auto rounded-t-3xl lg:rounded-2xl overflow-hidden shadow-2xl bg-white"
-              initial={{ y: "100%", opacity: 0.5 }}
-              animate={{ y: 0, opacity: 1 }}
-              exit={{ y: "100%", opacity: 0 }}
-              transition={{
-                type: "spring",
-                damping: 25,
-                stiffness: 250,
-              }}
-              drag="y"
-              dragControls={dragControls}
-              dragConstraints={{ top: 0, bottom: 0 }}
-              dragElastic={{ top: 0, bottom: 0.5 }}
-              onDragEnd={(_, { offset, velocity }) => {
-                if (offset.y > 100 || velocity.y > 500) {
-                  setSelectedId(null);
+    <Drawer.Root
+      open={selectedId !== null}
+      onClose={() => setSelectedId(null)}
+    >
+      <Drawer.Portal>
+        <div className="fixed inset-0 z-50 lg:flex lg:items-center lg:justify-center">
+          <Drawer.Overlay className="fixed inset-0 bg-black/40" />
+          <Drawer.Content
+            className="bg-white flex flex-col rounded-t-[10px] lg:rounded-lg h-[96%] lg:h-auto lg:max-h-[90vh] w-full lg:max-w-7xl mt-24 lg:mt-0 z-50 lg:relative"
+            onWheelCapture={(e) => e.stopPropagation()}
+          >
+            <div
+              className="p-4 bg-white rounded-t-[10px] lg:rounded-lg flex-1 overflow-y-auto no-scrollbar"
+              onWheel={(e) => {
+                const el = e.currentTarget;
+                if (el.scrollTop === 0 && e.deltaY < 0) {
+                  e.preventDefault();
+                } else if (el.scrollTop + el.clientHeight >= el.scrollHeight - 2 && e.deltaY > 0) {
+                  e.preventDefault();
                 }
+                e.stopPropagation();
               }}
-              onWheel={(e) => e.stopPropagation()}
-              onTouchMove={(e) => e.stopPropagation()}
-              dragListener={false}
             >
-              {/* Drag Handle - Mobile Only */}
-              <div
-                className="lg:hidden bg-white pt-3 pb-2 flex justify-center sticky top-0 z-20 cursor-grab active:cursor-grabbing"
-                onPointerDown={(e) => dragControls.start(e)}
-              >
-                <div className="w-12 h-1.5 bg-gray-400 rounded-full" />
+              <div className="mx-auto w-12 h-1.5 flex-shrink-0 rounded-full bg-zinc-300 mb-8 lg:hidden" />
+              <div className="max-w-7xl mx-auto">
+                <Drawer.Title className="sr-only">Project Details</Drawer.Title>
+                <ProjectCard
+                  key={selectedId}
+                  project={allProjects.find(p => p.id === selectedId)}
+                  currentIndex={currentProjectIndex}
+                  totalProjects={allProjects.length}
+                  onNext={handleNextProject}
+                  onPrevious={handlePreviousProject}
+                  onClose={() => setSelectedId(null)}
+                />
               </div>
-
-              <div className="h-[calc(100%-2.5rem)] lg:h-full overflow-y-auto overflow-x-hidden">
-                <AnimatePresence mode="wait" initial={false}>
-                  <ProjectCard
-                    key={selectedId}
-                    project={allProjects.find(p => p.id === selectedId)}
-                    currentIndex={currentProjectIndex}
-                    totalProjects={allProjects.length}
-                    onNext={handleNextProject}
-                    onPrevious={handlePreviousProject}
-                  />
-                </AnimatePresence>
-              </div>
-
-              {/* Close Button */}
-              <motion.button
-                onClick={() => setSelectedId(null)}
-                className="fixed top-3 right-3 lg:absolute lg:top-4 lg:right-4 z-50 bg-black text-white hover:bg-red-600 rounded-full p-2 sm:p-2.5 lg:p-3 shadow-2xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
-                initial={{ scale: 0, rotate: -180, opacity: 0 }}
-                animate={{ scale: 1, rotate: 0, opacity: 1 }}
-                exit={{ scale: 0, rotate: 180, opacity: 0 }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.2,
-                  ease: "backOut"
-                }}
-                whileHover={{ scale: 1.15, rotate: 90 }}
-                whileTap={{ scale: 0.9 }}
-              >
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="sm:w-6 sm:h-6"
-                >
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </motion.button>
-            </motion.div>
-          </div>
-        </Portal>
-      )}
-    </AnimatePresence>
+            </div>
+          </Drawer.Content>
+        </div>
+      </Drawer.Portal>
+    </Drawer.Root>
   </>
 );
 }

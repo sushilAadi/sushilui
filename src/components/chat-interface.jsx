@@ -457,7 +457,7 @@ export function ChatInterface() {
   const isDisabled = isLoading || isTyping || isEmbedding || rateLimitCountdown > 0;
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed inset-0 z-50 pointer-events-none" style={{ top: 'auto', left: 'auto', width: 'auto', height: 'auto', bottom: '1rem', right: '1rem' }}>
       {/* Chat Toggle Button */}
       {!isOpen && (
         <button
@@ -465,7 +465,7 @@ export function ChatInterface() {
             setIsOpen(true);
             posthog.capture("chat_window_opened");
           }}
-          className="w-14 h-14 bg-black hover:bg-gray-800 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-105"
+          className="pointer-events-auto w-14 h-14 bg-black hover:bg-gray-800 text-white rounded-full shadow-lg flex items-center justify-center transition-transform hover:scale-105"
         >
           <MessageCircle className="w-6 h-6" />
         </button>
@@ -473,7 +473,7 @@ export function ChatInterface() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="w-[380px] h-[550px] bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200 overflow-hidden">
+        <div className="pointer-events-auto w-[calc(100vw-2rem)] sm:w-[320px] md:w-[380px] h-[550px] bg-white rounded-2xl shadow-2xl flex flex-col border border-gray-200 overflow-hidden absolute bottom-0 right-0">
           {/* Header */}
           <header className="shrink-0 border-b border-gray-200 bg-white px-4 py-3 rounded-t-2xl">
             <div className="flex items-center justify-between">
