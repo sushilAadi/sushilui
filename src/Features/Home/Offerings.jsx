@@ -13,13 +13,9 @@ const PosterOfferings = () => {
   const isListInView = useInView(listRef, { once: true, margin: "-50px" });
 
   return (
-    <motion.div
+    <div
       ref={containerRef}
-      className="relative w-full bg-[#F0F0F0] text-black selection:bg-red-600 selection:text-white font-sans mx-auto overflow-x-hidden lg:overflow-x-visible"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6 }}
+      className="relative w-full bg-[#F0F0F0] text-black selection:bg-red-600 selection:text-white font-sans mx-auto"
     >
       {/* --- GLOBAL GRAIN TEXTURE --- */}
       <div
@@ -30,7 +26,7 @@ const PosterOfferings = () => {
       />
 
       <div className="container mx-auto px-4 md:px-8 pt-12 lg:pt-24 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start relative">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative">
           {/* --- LEFT COLUMN: THE LIST --- */}
           <div ref={listRef} className="lg:col-span-7 flex flex-col relative">
             {/* Header with animated border */}
@@ -76,7 +72,8 @@ const PosterOfferings = () => {
           </div>
 
           {/* --- RIGHT COLUMN: THE POSTER (Desktop Only) --- */}
-          <div className="hidden lg:block lg:col-span-5 sticky top-20 self-start">
+          <div className="hidden lg:block lg:col-span-5">
+            <div className="sticky top-[50px]">
             <div className="relative w-full aspect-[9/12] border-4 border-black bg-black p-4 shadow-[10px_10px_0px_0px_rgba(0,0,0,1)]">
               {/* Container */}
               <div className="relative h-full w-full overflow-hidden bg-neutral-900">
@@ -92,6 +89,7 @@ const PosterOfferings = () => {
                 {/* Scanlines */}
                 <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-[20] bg-[length:100%_2px,3px_100%]" />
               </div>
+            </div>
             </div>
           </div>
         </div>
@@ -121,7 +119,7 @@ const PosterOfferings = () => {
           </div>
         </motion.div>
       </motion.section>
-    </motion.div>
+    </div>
   );
 };
 

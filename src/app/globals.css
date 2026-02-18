@@ -13,7 +13,7 @@
 }
 
 html {
-  overflow-x: hidden;
+  overflow-x: clip;
   scroll-behavior: smooth;
 }
 
@@ -23,7 +23,7 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   /* font-family: "Roboto Flex", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
