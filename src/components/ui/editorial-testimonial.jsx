@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { testimonials } from "@/utils"
 
@@ -59,12 +58,11 @@ export default function TestimonialsEditorial() {
           >
             <div className="flex items-center gap-4">
               <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-foreground/10 group-hover:ring-foreground/30 transition-all duration-300">
-                <Image
-                  src={current.image || "/placeholder.svg"}
-                  alt={current.author}
-                  fill
-                  className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                />
+                <div className="w-full h-full flex items-center justify-center bg-muted">
+                  <span className="text-lg font-medium text-muted-foreground">
+                    {current.author.charAt(0)}
+                  </span>
+                </div>
               </div>
               <div>
                 <p className="font-medium text-foreground">{current.author}</p>

@@ -26,7 +26,7 @@ export const allProjects = [
     gridArea: 'span 2 / span 2', // Featured Item
     isBig: true,
     client:"Saudi Arabia",
-    map:"image url"
+    map:"image url",
   },
   {
     id: '02',
@@ -41,7 +41,8 @@ export const allProjects = [
     developmentType: 'Frontend',
     gridArea: 'span 1 / span 1',
     client:"Saudi Arabia",
-    map:"image url"
+    map:"image url",
+    bgColor:"#fdf0f0"
   },
   {
     id: '03',
@@ -57,7 +58,7 @@ export const allProjects = [
     gridArea: 'span 1 / span 1',
     client:"India",
     map:"image url",
-    bgColor:"#000002"
+    bgColor:"#00020A"
   },
   {
     id: '04',
@@ -152,7 +153,6 @@ export const allProjects = [
     gridArea: 'span 1 / span 1',
     client:"India",
     map:"image url",
-    bgColor:"#EEEEEE"
   },
   {
     id: '10',
@@ -168,7 +168,7 @@ export const allProjects = [
     gridArea: 'span 1 / span 1',
     client:"India",
     map:"image url",
-    bgColor:"#E3E3E3"
+    bgColor:"#ffffff"
   },
   {
     id: '11',

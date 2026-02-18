@@ -24,7 +24,7 @@ const Testimonial = () => {
   return (
     <section ref={sectionRef} className="flex w-full border-t border-gray-100" aria-label="Core offerings">
       {/* LEFT GUTTER - Matching contact page */}
-      <div className="hidden md:flex w-16 flex-col items-center border-r border-gray-100 py-10 md:w-24">
+      <div className="hidden md:flex  w-16 flex-col items-center border-r border-gray-100 py-10 md:w-24 ">
 
       </div>
 
