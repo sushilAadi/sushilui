@@ -55,7 +55,7 @@ const LoadingAnimation = ({ onComplete, onExitStart }) => {
 
   useGSAP(() => {
     // Initial states
-    gsap.set('.loader-text', { y: 100, opacity: 0 });
+    gsap.set('.loader-text', { y: 60, opacity: 0 });
     gsap.set('.loader-tagline', { opacity: 0 });
     gsap.set('.loader-line', { scaleX: 0 });
 
@@ -70,7 +70,7 @@ const LoadingAnimation = ({ onComplete, onExitStart }) => {
 
         // Then start exit animation - loading screen slides DOWN to reveal home
         gsap.to(".loading-screen", {
-          duration: 1.2,
+          duration: 0.6,
           y: "100%",
           ease: "power3.inOut",
           onComplete: onComplete,
@@ -80,11 +80,11 @@ const LoadingAnimation = ({ onComplete, onExitStart }) => {
 
     // Stagger panels come in from top (original behavior)
     loadingTl.from(".stagger-panel", {
-      duration: 0.8,
+      duration: 0.4,
       y: "-100%",
       ease: "power2.inOut",
       stagger: {
-        amount: 0.4,
+        amount: 0.2,
         from: "start",
       },
     });
@@ -93,23 +93,23 @@ const LoadingAnimation = ({ onComplete, onExitStart }) => {
     loadingTl.to('.loader-text', {
       y: 0,
       opacity: 1,
-      duration: 0.7,
+      duration: 0.35,
       ease: "back.out(1.7)"
-    }, "-=0.2");
+    }, "-=0.1");
 
     // Line draws from center
     loadingTl.to('.loader-line', {
       scaleX: 1,
-      duration: 0.6,
+      duration: 0.3,
       ease: "power3.inOut"
-    }, "-=0.4");
+    }, "-=0.2");
 
     // Tagline fades in
     loadingTl.to('.loader-tagline', {
       opacity: 1,
-      duration: 0.5,
+      duration: 0.25,
       ease: "power2.out"
-    }, "-=0.3");
+    }, "-=0.15");
   });
 
   return (

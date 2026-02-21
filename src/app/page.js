@@ -6,17 +6,10 @@ import bagImage from "@/images/bag.webp";
 import person from "@/images/person.png";
 import Image from "next/image";
 import "./home.css";
-import LetterSwapPingPong from "@/components/fancy/text/letter-swap-pingpong-anim";
-import SectionThree from "@/Features/Home/SectionThree";
-import Service from "@/Features/Home/Service";
+import dynamic from "next/dynamic";
 import ScrollRevealParagraph from "@/components/smoothui/ui/ScrollRevealParagraph";
 import { LogoStepper } from "@/components/logoStepper";
 import { logos } from "@/utils";
-import { Highlighter } from "@/components/ui/highlighter";
-import MyWork from "@/Features/Home/MyWork/MyWork";
-import MyWorks from "@/Features/Home/MyWork/MyWorks";
-import Testimonial from "@/Features/Home/Testimonial/page";
-import ContactForm from "@/Features/Home/contact/page";
 import {
   AnimatedText,
   FadeUp,
@@ -26,6 +19,12 @@ import {
   StaggerItem,
   Float,
 } from "@/components/animations/HeroAnimations";
+
+const SectionThree = dynamic(() => import("@/Features/Home/SectionThree"), { ssr: false });
+const Service = dynamic(() => import("@/Features/Home/Service"), { ssr: false });
+const MyWorks = dynamic(() => import("@/Features/Home/MyWork/MyWorks"), { ssr: false });
+const Testimonial = dynamic(() => import("@/Features/Home/Testimonial/page"), { ssr: false });
+const ContactForm = dynamic(() => import("@/Features/Home/contact/page"), { ssr: false });
 
 
 const Home = () => {
@@ -80,12 +79,20 @@ const Home = () => {
         >
           {/* Animated background with parallax */}
           <motion.div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0"
             style={{
-              backgroundImage: `url(${bagImage.src})`,
               y: backgroundY,
             }}
-          />
+          >
+            <Image
+              src={bagImage}
+              alt=""
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </motion.div>
 
           {/* Animated overlay with gradient fade at bottom */}
           <motion.div
@@ -226,13 +233,13 @@ const Home = () => {
               </StaggerContainer>
 
               {/* Spacer for person image - only on large desktop */}
-              <div className="hidden lg:block w-[400px] shrink-0"></div>
+              <div className="hidden lg:block w-[400px] hero-spacer shrink-0"></div>
 
-              <motion.div style={{ y: descriptionY }} className="max-w-full lg:max-w-[400px]">
+              <motion.div style={{ y: descriptionY }} className="max-w-full lg:max-w-[400px] hero-description">
                 <ScrollReveal delay={0.2} y={30}>
                   <ScrollRevealParagraph
                     paragraph={description}
-                    className="text-foreground text-[16px] md:text-[18px] lg:text-[24px] font-secondary text-center lg:text-left"
+                    className="text-foreground text-[16px] md:text-[18px] lg:text-[24px] font-secondary text-center lg:text-left hero-paragraph"
                   />
                 </ScrollReveal>
               </motion.div>

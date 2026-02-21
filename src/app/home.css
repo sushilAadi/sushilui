@@ -32,6 +32,17 @@
     top: -30px;
   }
 }
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .hero-spacer {
+    width: 230px !important;
+  }
+  .hero-description {
+    max-width: 330px !important;
+  }
+  .hero-paragraph {
+    font-size: 20px;
+  }
+}
 @media (min-width: 1440px){
   .frontendStyling {
     bottom: -120px;

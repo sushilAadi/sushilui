@@ -1,8 +1,7 @@
 import { CSPostHogProvider } from "@/components/PostHogProvider";
 import ClientSideLayout from '@/components/ClientSideLayout';
 import "./globals.css";
-import 'animate.css';
-import { ChatInterface } from '@/components/chat-interface';
+import LazyChatInterface from '@/components/LazyChatInterface';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 
 export const metadata = {
@@ -15,14 +14,14 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head suppressHydrationWarning>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link href="https://fonts.googleapis.com/css2?family=Matangi:wght@300..900&display=swap" rel="stylesheet"/>
+        <link rel="preload" href="/fonts/matangi-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/gurvaco-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
+        <link rel="preload" href="/fonts/BastligaOne.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
       </head>
       <body suppressHydrationWarning className="antialiased">
         <CSPostHogProvider>
           <ClientSideLayout>{children}</ClientSideLayout>
-          <ChatInterface />
+          <LazyChatInterface />
         </CSPostHogProvider>
         <MicrosoftClarity />
       </body>
