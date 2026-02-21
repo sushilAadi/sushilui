@@ -1,13 +1,20 @@
 'use client';
 
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 import LoadingAnimation from './LoadingAnimation';
 import SmoothScroll from './SmoothScroll';
 import NormalMenu from './NormalMenu';
 
 export default function ClientSideLayout({ children }) {
+  const pathname = usePathname();
+  const isDashboard = pathname?.startsWith('/dashboard');
   const [loading, setLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+
+  if (isDashboard) {
+    return <>{children}</>;
+  }
 
   const handleExitStart = () => {
     // Show content IMMEDIATELY when loading reaches 100% (before exit animation)
