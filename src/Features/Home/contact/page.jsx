@@ -256,25 +256,7 @@ const ContactPage = () => {
       <div ref={containerRef} className="flex min-h-screen w-full bg-white text-black antialiased border-t border-gray-100 font-matangi">
 
       {/* 1. LEFT GUTTER (Logo Area) - Creates that specific 'left space' */}
-      <motion.div
-        className="hidden md:flex  w-16 flex-col items-center border-r border-gray-100 py-10 md:w-24"
-        initial={{ opacity: 0, x: -20 }}
-        animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-        transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
-      >
-        {/* Logo matching the grid style in the image */}
-        <motion.div
-          className="grid h-8 w-8 grid-cols-2"
-          initial={{ scale: 0, rotate: -180 }}
-          animate={isInView ? { scale: 1, rotate: 0 } : { scale: 0, rotate: -180 }}
-          transition={{ duration: 0.8, delay: 0.3, ease: "backOut" }}
-        >
-          <div className="bg-black"></div>
-          <div className="bg-red-600"></div>
-          <div className="bg-red-600"></div>
-          <div className="bg-black"></div>
-        </motion.div>
-      </motion.div>
+      
 
       {/* 2. MAIN CONTENT AREA (Split into Left Info and Right Form) */}
       <div className="flex flex-1 flex-col lg:flex-row">
