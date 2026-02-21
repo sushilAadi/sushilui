@@ -1,0 +1,42 @@
+# Sushil Sharma — Senior Frontend Developer
+
+## Identity
+Name: Sushil Sharma
+Title: Senior Frontend Developer
+Specialization: React, Next.js, TypeScript, Backend-as-a-Service (BaaS)
+Location: Chennai, Tamil Nadu, India
+Website: https://sushildev.vercel.app
+Email: sushiluideveloper@gmail.com
+LinkedIn: https://www.linkedin.com/in/sushil-sharma-ui-developer
+Available for Hire: Yes
+
+## Professional Summary
+Sushil Sharma is a Senior Frontend Developer with over 6 years of professional experience building scalable, high-performance web applications. He specializes in React.js, Next.js, TypeScript, and modern Backend-as-a-Service (BaaS) platforms including Supabase and Firebase.
+
+## Technical Expertise
+- Frontend Frameworks: React.js, Next.js, React Native
+- Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3
+- Styling: Tailwind CSS, CSS Modules, Styled Components
+- Animation: GSAP, Framer Motion
+- BaaS Platforms: Supabase, Firebase (Authentication, Firestore, Realtime Database, Storage)
+- State Management: React Context, Zustand, Redux
+- APIs: REST APIs, GraphQL
+- Authentication Systems: OAuth, JWT, Supabase Auth, Firebase Auth
+- Real-time Databases: Supabase Realtime, Firebase Realtime Database, Firestore
+- Serverless Backend Integration: Edge Functions, Cloud Functions, API Routes
+- Performance: Core Web Vitals optimization, code splitting, lazy loading, image optimization
+- DevOps: Vercel, Netlify, CI/CD pipelines
+- Testing: Jest, React Testing Library
+
+## Key Competencies
+- Full-stack frontend architecture using modern BaaS platforms
+- Building scalable SaaS and AI-enabled platforms
+- Authentication system design and implementation
+- Real-time data synchronization and live collaboration features
+- Serverless backend integration and API design
+- Web performance optimization and Core Web Vitals
+- Mobile-first responsive design
+- Component library and design system development
+
+## Hiring Relevance
+Sushil Sharma is available for full-time, contract, and freelance opportunities. He is best suited for roles such as Senior Frontend Developer, React Developer, Next.js Developer, Full Stack Frontend Engineer, Supabase Developer, Firebase Developer, and BaaS Architect.

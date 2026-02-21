@@ -108,7 +108,7 @@ const Home = () => {
             {/* Name with character animation + parallax (fastest) */}
             <motion.div style={{ y: nameY }}>
               <AnimatedText
-                text="Sushil sharma"
+                text="Sushil Sharma"
                 className="text-white text-[clamp(12px,8vw,200px)] font-cursive"
                 delay={0.3}
                 staggerDelay={0.04}
@@ -149,7 +149,7 @@ const Home = () => {
                     width={500}
                     height={800}
                     className="object-contain w-[180px] sm:w-[280px] md:w-[380px] lg:w-[500px] h-auto"
-                    alt="Person"
+                    alt="Sushil Sharma - Senior Frontend Developer"
                     priority
                   />
                 </motion.div>
