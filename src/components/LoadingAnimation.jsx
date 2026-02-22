@@ -156,7 +156,7 @@ const LoadingAnimation = ({ onComplete, onExitStart }) => {
 
       {/* Footer text */}
       <div className="loader-footer">
-        <span>Portfolio 2025</span>
+        <span>Portfolio 2026</span>
       </div>
     </div>
   );
