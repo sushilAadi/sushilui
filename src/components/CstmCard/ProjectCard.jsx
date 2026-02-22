@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft, ExternalLink, MapPin, Layers, X } from 'lucide-react';
 import Image from "next/image";
+import { LocationMap } from '@/components/ui/location-map';
 
 const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects, onClose }) => {
   if (!project) return null;
@@ -319,19 +320,17 @@ const ProjectCard = ({ project, onNext, onPrevious, currentIndex, totalProjects,
               animate="center"
               exit="exit"
               transition={{ duration: 0.4, delay: 0.1, ease: [0.32, 0.72, 0, 1] }}
-              className="w-full h-56 sm:h-64 lg:h-1/2 bg-red-600 relative overflow-hidden group p-5 sm:p-6 flex flex-col justify-between text-white shrink-0"
+              className="w-full h-56 sm:h-64 lg:h-1/2 bg-[#1a1a2e] relative overflow-hidden group shrink-0"
             >
-            {project.map && (
-              <div className="absolute inset-0 opacity-20 mix-blend-multiply pointer-events-none">
-                  <img src={project.map} className="w-full h-full object-cover grayscale" alt="Location Map" />
-              </div>
-            )}
+            <div className="absolute inset-0 z-0">
+                <LocationMap location={project.client} zoom={4} className="!min-h-0 h-full w-full rounded-none" />
+            </div>
 
-            <div className="relative z-10">
-                <h3 className="text-xl sm:text-xl font-bold mb-2">Client Location</h3>
+            <div className="relative z-10 p-5 sm:p-6 flex flex-col justify-between h-full pointer-events-none">
+                <h3 className="text-xl sm:text-xl font-bold mb-2 text-white">Client Location</h3>
                 <div className="flex items-center gap-2 sm:gap-2">
-                    <MapPin className="w-4 h-4 sm:w-4 sm:h-4" />
-                    <p className="text-base sm:text-base opacity-90">{project.client}</p>
+                    <MapPin className="w-4 h-4 sm:w-4 sm:h-4 text-white" />
+                    <p className="text-base sm:text-base text-white opacity-90">{project?.client}</p>
                 </div>
             </div>
 
