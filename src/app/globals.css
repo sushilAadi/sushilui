@@ -260,6 +260,10 @@ body {
   .leaflet-div-icon {
     @apply !bg-transparent !border-none !w-auto !h-auto;
   }
+  .leaflet-container .leaflet-marker-pane .leaflet-div-icon img {
+    width: 16px !important;
+    height: 16px !important;
+  }
   .leaflet-popup-content-wrapper, .leaflet-popup-content, .leaflet-popup-content p {
     @apply ![all:unset];
   }
