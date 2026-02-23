@@ -3,6 +3,7 @@ import ClientSideLayout from '@/components/ClientSideLayout';
 import "./globals.css";
 import LazyChatInterface from '@/components/LazyChatInterface';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 const SITE_URL = "https://sushildev.vercel.app";
 
@@ -142,6 +143,7 @@ export default function RootLayout({ children }) {
           <LazyChatInterface />
         </CSPostHogProvider>
         <MicrosoftClarity />
+        <GoogleAnalytics />
       </body>
     </html>
   );
