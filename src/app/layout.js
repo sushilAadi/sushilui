@@ -4,6 +4,7 @@ import "./globals.css";
 import LazyChatInterface from '@/components/LazyChatInterface';
 import MicrosoftClarity from '@/components/MicrosoftClarity';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import { Analytics } from "@vercel/analytics/next";
 
 const SITE_URL = "https://sushildev.vercel.app";
 
@@ -124,6 +125,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head suppressHydrationWarning>
+        <GoogleAnalytics />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
         <link rel="preload" href="/fonts/matangi-latin.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
         <link rel="preload" href="/fonts/gurvaco-regular.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
@@ -143,7 +145,7 @@ export default function RootLayout({ children }) {
           <LazyChatInterface />
         </CSPostHogProvider>
         <MicrosoftClarity />
-        <GoogleAnalytics />
+        <Analytics />
       </body>
     </html>
   );
