@@ -356,24 +356,28 @@ export const testimonials = [
 export const companyDetails = [
   {
     id: 1,
-    name: "FLOOID (Keuro)",
-    logo: flooidLogo,
-    secondaryLogo: keuroLogo,
+    name: "Keuro Health and Technology LLP",
+    logo: keuroLogo,
     role: "Front-end Developer",
-    type: "Remote",
-    duration: "August 2023 - Present",
-    projects: [
-      "Riyaah Ecommerce",
-      "OMS Order Management",
-      "EV-Ready India (OMI Foundation)",
-      "HerKey PWA",
-      "Centrum Wealth",
-    ],
+    type: "Hybrid",
+    duration: "September 2024 - September 2026",
+    projects: ["Riyaah Ecommerce", "OMS Order Management"],
     description:
-      "Led front-end development for enterprise platforms (Fintech, PWA, Government, E-Commerce), driving performance improvements and user experience.",
+      "Continued the Riyaah and OMS projects after they transitioned from FLOOID: a bilingual (English and Arabic) e-commerce platform with Algolia search, and an admin panel for high-volume orders, catalog, banners and inventory. Improved accessibility to WCAG 2.1 AA.",
   },
   {
     id: 2,
+    name: "FLOOID",
+    logo: flooidLogo,
+    role: "Front-end Developer",
+    type: "Remote",
+    duration: "August 2023 - August 2024",
+    projects: ["Centrum Wealth", "HerKey PWA", "EV-Ready India (OMI Foundation)"],
+    description:
+      "Built a fintech investment platform, an offline-first PWA for women professionals, and interactive EV ecosystem dashboards for government stakeholders.",
+  },
+  {
+    id: 3,
     name: "Cloudberry360",
     logo: cloudberryLogo,
     secondaryLogo: apexxLogo,
@@ -385,7 +389,7 @@ export const companyDetails = [
       "Developed and maintained internal payment system dashboard using React.js, built reusable component library, and improved website performance across client projects.",
   },
   {
-    id: 3,
+    id: 4,
     name: "NVEST",
     logo: nvestLogo,
     role: "Front-end Developer",

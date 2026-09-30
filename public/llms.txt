@@ -1,42 +1,38 @@
-# Sushil Sharma — Senior Frontend Developer
+# Sushil Sharma — Front-end Developer
 
 ## Identity
 Name: Sushil Sharma
-Title: Senior Frontend Developer
-Specialization: React, Next.js, TypeScript, Backend-as-a-Service (BaaS)
-Location: Chennai, Tamil Nadu, India
+Title: Front-end Developer
+Specialization: React, Next.js, React Native, WhatsApp Cloud API agents, Supabase
+Location: Guwahati, Assam, India
 Website: https://sushildev.vercel.app
 Email: sushiluideveloper@gmail.com
 LinkedIn: https://www.linkedin.com/in/sushil-sharma-ui-developer
 Available for Hire: Yes
 
 ## Professional Summary
-Sushil Sharma is a Senior Frontend Developer with over 6 years of professional experience building scalable, high-performance web applications. He specializes in React.js, Next.js, TypeScript, and modern Backend-as-a-Service (BaaS) platforms including Supabase and Firebase.
+Sushil Sharma is a Front-end Developer with 6+ years of experience building scalable React.js, Next.js and React Native applications for fintech, e-commerce and SaaS. He focuses on performance, accessibility (WCAG 2.1 AA), design systems, API integration and payment flows, with full-stack experience in Supabase, the WhatsApp Cloud API and AI/LLM integrations.
 
 ## Technical Expertise
-- Frontend Frameworks: React.js, Next.js, React Native
-- Languages: JavaScript (ES6+), TypeScript, HTML5, CSS3
-- Styling: Tailwind CSS, CSS Modules, Styled Components
-- Animation: GSAP, Framer Motion
-- BaaS Platforms: Supabase, Firebase (Authentication, Firestore, Realtime Database, Storage)
-- State Management: React Context, Zustand, Redux
-- APIs: REST APIs, GraphQL
-- Authentication Systems: OAuth, JWT, Supabase Auth, Firebase Auth
-- Real-time Databases: Supabase Realtime, Firebase Realtime Database, Firestore
-- Serverless Backend Integration: Edge Functions, Cloud Functions, API Routes
-- Performance: Core Web Vitals optimization, code splitting, lazy loading, image optimization
-- DevOps: Vercel, Netlify, CI/CD pipelines
+- Frontend: React.js, Next.js, React Native, JavaScript (ES6+), HTML5, CSS3, TypeScript
+- Styling: Tailwind CSS, Bootstrap, Shadcn UI
+- Data Fetching and Charts: TanStack Query, Recharts
+- APIs and Integrations: REST, WhatsApp Cloud API, Google Calendar API, Google Sheets API, Razorpay, Stripe, OAuth, Algolia
+- AI: AI/LLM API integration, Vercel AI SDK, TanStack AI, prompt engineering, AI-assisted development
+- Backend-as-a-Service and Auth: Supabase (Auth, Database), Firebase, Clerk
+- Practices: Agile, Scrum, PWA and Chrome extension development, code splitting, Lighthouse auditing, WCAG 2.1 AA
 - Testing: Jest, React Testing Library
+- Tools: Git, GitLab
 
-## Key Competencies
-- Full-stack frontend architecture using modern BaaS platforms
-- Building scalable SaaS and AI-enabled platforms
-- Authentication system design and implementation
-- Real-time data synchronization and live collaboration features
-- Serverless backend integration and API design
-- Web performance optimization and Core Web Vitals
-- Mobile-first responsive design
-- Component library and design system development
+## Experience
+- Keuro Health and Technology LLP (Keuro Digital), Front-end Developer, Sep 2024 - Sep 2026: Riyaah e-commerce (English/Arabic, Algolia search) and OMS order management admin panel.
+- FLOOID, Front-end Developer, Aug 2023 - Aug 2024: Centrum Wealth, HerKey PWA, EV-Ready India dashboards.
+- Cloudberry360, Front-end Developer, Sep 2021 - Jul 2023: Apexx payment dashboard, reusable React component library.
+- NVEST, Front-end Developer, Sep 2019 - Jul 2021: Ethereum Chrome extension, multi-cryptocurrency payments.
+
+## Projects
+- WhatsApp Doctor Appointment Agent: booking, cancellation, prescriptions, Google Calendar and Sheets sync, admin dashboard (WhatsApp Cloud API, Next.js, Supabase).
+- WhatsApp Course Enquiry and Registration Agent: 66 courses in 6 categories, AI answers, registration and enrollment requests, admin panel (WhatsApp Cloud API, Next.js, Supabase).
 
 ## Hiring Relevance
-Sushil Sharma is available for full-time, contract, and freelance opportunities. He is best suited for roles such as Senior Frontend Developer, React Developer, Next.js Developer, Full Stack Frontend Engineer, Supabase Developer, Firebase Developer, and BaaS Architect.
+Sushil Sharma is available for full-time, contract and freelance opportunities. He is best suited for roles such as Front-end Developer, React Developer, Next.js Developer, React Native Developer and full-stack roles using Next.js and Supabase, and for building WhatsApp agents for businesses.

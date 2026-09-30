@@ -308,8 +308,8 @@ const ContactPage = () => {
             >
               <p className="mb-1 text-xs  uppercase tracking-widest text-gray-400 font-matangi">Address</p>
               <p className="text-xl  leading-snug font-custom ">
-                Chennai, <br />
-                Tamil Nadu, India
+                Guwahati, <br />
+                Assam, India
               </p>
             </motion.div>
           </div>

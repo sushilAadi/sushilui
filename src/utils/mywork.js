@@ -6,8 +6,8 @@ import HerKey from "../images/Project/herkey.webp";
 import Centrum from "../images/Project/wealthverseweb.png";
 import WealthVerseApp from "../images/Project/WealthVerseApp.png";
 import Apexx from "../images/Project/apexx.svg";
-import NeBiofuels from "../images/Project/fitness.webp";
-import Tutoring from "../images/Project/tutoring.webp";
+import WhatsAppDoctor from "../images/Project/whatsappDoctor.png";
+import WhatsAppInstitute from "../images/Project/whatsappInstitute.png";
 import CryptoX from "../images/Project/crypto.webp";
 import MetaMask from "../images/Project/metamask.webp";
 
@@ -124,35 +124,36 @@ export const allProjects = [
   },
   {
     id: '08',
-    category: 'PWA',
-    title: 'NEEED FIT',
+    category: 'APP',
+    title: 'WhatsApp Doctor Appointment Agent',
     projectUrl: '',
-    status: 'work-in-progress',
-    techStack: ['NextJS', 'Firebase', 'Clerk','Gemini API'],
-    Image: NeBiofuels,
+    status: 'private',
+    techStack: ['WhatsApp Cloud API', 'NextJS', 'Supabase', 'Google Calendar API', 'Google Sheets API'],
+    Image: WhatsAppDoctor,
     highlight: 'C.',
-    description: 'Fitness PWA with custom workout routines, AI-driven nutrition and body composition analysis, powered by OpenAI and Replicate APIs.',
+    description: 'WhatsApp appointment system: patients book, cancel and rebook in chat with live slots, doctors onboard, block time and send prescription PDFs, with an admin dashboard and Google Calendar and Sheets sync.',
     developmentType: 'Full Stack',
-    gridArea: 'span 1 / span 2', // Tall item
+    gridArea: 'span 1 / span 2',
     isBigNumber: true,
     client:"India",
     map:"image url",
-    bgColor: "#e4e5ec"
+    bgColor: "#0a0a0c"
   },
   {
     id: '09',
-    category: 'WEBSITE',
-    title: 'Tutoring Marketplace',
+    category: 'APP',
+    title: 'WhatsApp Course Enquiry Agent',
     projectUrl: '',
-    status: 'work-in-progress',
-    techStack: ['NextJS', 'Supabase', 'GCP', 'React Query'],
-    Image: Tutoring,
+    status: 'private',
+    techStack: ['WhatsApp Cloud API', 'NextJS', 'Supabase', 'AI/LLM API'],
+    Image: WhatsAppInstitute,
     highlight: 'W.',
-    description: 'Marketplace platform connecting students and teachers with secure multi-provider authentication, Razorpay escrow payments, and booking workflows.',
+    description: 'WhatsApp agent for an engineering institute: students browse 66 courses in 6 categories, get AI answers, register and request enrollment, with an admin panel to verify payments and issue coupons.',
     developmentType: 'Full Stack',
     gridArea: 'span 1 / span 1',
     client:"India",
     map:"image url",
+    bgColor: "#0a0a0c"
   },
   {
     id: '10',

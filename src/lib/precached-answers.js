@@ -1,119 +1,136 @@
 // Pre-cached answers for common questions
 // These don't require any API calls - works offline!
 
+const CONTACT = `📞 Call/WhatsApp: +91 7892808101\n📧 Email: sushiluideveloper@gmail.com`;
+
 export const precachedAnswers = {
   skills: {
-    answer: `Sushil Sharma possesses a comprehensive skill set in front-end development. His core technologies include React.js, Next.js, React Native, JavaScript (ES6+), HTML5, and CSS3. He is proficient in styling with Tailwind CSS, Bootstrap, and Shadcn UI. For data management, he uses TanStack Query. He has experience with authentication systems including Clerk, Firebase, Supabase Auth, and OAuth. He also works with payment gateways like Razorpay and Stripe, and has expertise in Algolia for search functionality. Additionally, he follows WCAG 2.1 AA accessibility standards and has experience with PWA and Chrome Extension development.`,
+    answer: `Sushil Sharma's core skills are React.js, Next.js, React Native, JavaScript (ES6+), HTML5, CSS3 and TypeScript. He styles with Tailwind CSS, Bootstrap and Shadcn UI, and uses TanStack Query for data fetching. On the integration side he works with REST APIs, the WhatsApp Cloud API, Google Calendar and Sheets APIs, Razorpay, Stripe, OAuth and Algolia. He builds with AI/LLM APIs (Vercel AI SDK, TanStack AI) and AI-assisted tools like Claude Code, Cursor and Codex. Backend-as-a-Service experience covers Supabase (Auth, Database), Firebase and Clerk. He follows WCAG 2.1 AA accessibility standards and has built PWAs and Chrome extensions.`,
     sources: ["Resume - Technical Skills"],
   },
 
   experience: {
-    answer: `Sushil Sharma has over 5 years of professional experience as a Front-end Developer. He is currently working at FLOOID (Remote) since August 2023, where he leads front-end development for enterprise platforms including fintech, PWA, government, and e-commerce projects. Previously, he worked at Cloudberry360 in Bengaluru (September 2021 - July 2023) developing payment system dashboards and reusable React components. Before that, he was at NVEST in Bengaluru (September 2019 - July 2021) where he developed Chrome browser extensions for Ethereum transactions and integrated multi-cryptocurrency payment systems.`,
+    answer: `Sushil Sharma has 6+ years of experience as a Front-end Developer. Most recently he worked at Keuro Health and Technology LLP (Keuro Digital, September 2024 - September 2026), continuing the Riyaah e-commerce and OMS projects. Before that he was at FLOOID (Remote, August 2023 - August 2024) building Centrum Wealth, HerKey PWA and EV-Ready India. Earlier he worked at Cloudberry360 in Bengaluru (September 2021 - July 2023) on a payment dashboard and a reusable React component library, and at NVEST in Bengaluru (September 2019 - July 2021) on an Ethereum Chrome extension and crypto payments.`,
     sources: ["Resume - Professional Experience"],
   },
 
   projects: {
-    answer: `Sushil has worked on several notable projects. At FLOOID, he delivered Riyaah Ecommerce (multi-language e-commerce with Algolia search), OMS Order Management system, EV-Ready India dashboards for government stakeholders, HerKey PWA for women professionals, and Centrum Wealth fintech platform. His personal projects include a Tutoring Marketplace Platform (Next.js + Supabase, currently in progress) and NEEED FIT, a PWA fitness app with AI-powered nutrition analysis using Next.js, Firebase, and OpenAI/Replicate APIs.`,
+    answer: `Sushil has delivered Riyaah E-commerce (bilingual English/Arabic storefront with Algolia search) and the OMS admin panel at Keuro, and Centrum Wealth (fintech), HerKey PWA and EV-Ready India dashboards at FLOOID. He has also built two WhatsApp agents: a Doctor Appointment Agent (booking, cancellation, prescriptions, Google Calendar and Sheets sync, admin dashboard) and a Course Enquiry and Registration Agent for an engineering institute (66 courses in 6 categories, AI answers, registration and enrollment requests, admin panel). Both use the WhatsApp Cloud API, Next.js and Supabase.`,
     sources: ["Resume - Projects"],
   },
 
+  whatsapp: {
+    answer: `Sushil builds WhatsApp agents on the WhatsApp Cloud API with Next.js and Supabase. His Doctor Appointment Agent lets doctors onboard, block time and send prescription PDFs from chat, while patients book, cancel and rebook with live slots. Every booking syncs to Google Calendar and Google Sheets, and an admin dashboard shows the schedule and analytics. His Course Enquiry and Registration Agent lets students browse 66 courses in 6 categories, ask questions answered by AI, register and request enrollment, with an admin panel for payments, coupons and requests.\n\nWant one for your business?\n${CONTACT}`,
+    sources: ["Resume - WhatsApp Projects"],
+  },
+
+  ai: {
+    answer: `Sushil integrates AI/LLM APIs into products, for example the AI-generated answers in his institute enquiry agent, which are based on the course data. He works with the Vercel AI SDK and TanStack AI, applies prompt engineering, and uses AI-assisted development tools such as Claude Code, Cursor and Codex.`,
+    sources: ["Resume - AI Skills"],
+  },
+
   education: {
-    answer: `Sushil Sharma holds a Master of Computer Applications (MCA) from New Horizon College of Engineering, Bengaluru, completed in January 2018. He also has a Bachelor of Computer Applications (BCA) from Asian Institute of Management And Science, Guwahati, completed in January 2014.`,
+    answer: `Sushil Sharma holds a Master of Computer Applications (MCA) from New Horizon College of Engineering, Bengaluru (2018) and a Bachelor of Computer Applications (BCA) from Asian Institute of Management And Science, Guwahati (2014).`,
     sources: ["Resume - Education"],
   },
 
   contact: {
-    answer: `You can reach Sushil Sharma through the following channels: Email: sushiluideveloper@gmail.com, Phone: +91-7892808101, LinkedIn: sushilsharma-ui-developer. He is currently located in Chennai, India.`,
+    answer: `You can reach Sushil Sharma at:\n📧 Email: sushiluideveloper@gmail.com\n📞 Phone: +91-7892808101\n🔗 LinkedIn: linkedin.com/in/sushil-sharma-ui-developer\n🌐 Portfolio: sushildev.vercel.app\n\nHe is based in Guwahati, India.`,
     sources: ["Resume - Contact Information"],
   },
 
   about: {
-    answer: `Sushil Sharma is an experienced Front-end Developer with over 5 years of expertise in building dynamic, scalable web and mobile applications. He specializes in React.js, Next.js, and React Native, with a focus on modular interface architecture, performance optimization, and accessibility compliance. He has delivered outstanding user experiences for fintech, e-commerce, and SaaS verticals, and is currently expanding into full-stack development with Supabase. He is dedicated to Agile collaboration and maintaining high code quality standards.`,
+    answer: `Sushil Sharma is a Front-end Developer with 6+ years of experience building scalable React.js, Next.js and React Native applications for fintech, e-commerce and SaaS. He focuses on performance, accessibility (WCAG 2.1 AA), design systems, API integration and payment flows, and has full-stack experience with Supabase, the WhatsApp Cloud API and AI/LLM integrations.`,
     sources: ["Resume - Professional Summary"],
   },
 
   payments: {
-    answer: `Sushil has extensive experience with payment integrations. He has worked with Razorpay and Stripe payment gateways. At NVEST, he integrated multi-cryptocurrency payment systems supporting Bitcoin, Ethereum, and various other cryptocurrencies with real-time exchange rate updates via WebSocket APIs. His personal project, the Tutoring Marketplace Platform, implements Razorpay escrow payments for secure transactions between students and teachers.`,
+    answer: `Sushil has worked with payment integrations including Razorpay and Stripe. At NVEST he integrated multi-cryptocurrency payments (Bitcoin, Ethereum and others) with real-time exchange rates over WebSocket APIs. At Cloudberry360 he built a payment system dashboard for high-volume monthly transactions. In his institute WhatsApp agent, students can make an optional registration payment that the admin verifies before issuing a discount coupon.`,
     sources: ["Resume - Technical Skills & Experience"],
   },
 
   frontend: {
-    answer: `Sushil is highly proficient in front-end technologies. His primary stack includes React.js, Next.js, and React Native for building web and mobile applications. He uses JavaScript (ES6+), HTML5, and CSS3 as core technologies. For styling, he employs Tailwind CSS, Bootstrap, and Shadcn UI with a focus on responsive design. He utilizes TanStack Query for efficient data fetching and state management. He is experienced in performance optimization using code splitting, Lighthouse auditing, and client-side caching.`,
+    answer: `Sushil's primary stack is React.js, Next.js and React Native, with JavaScript (ES6+), HTML5, CSS3 and TypeScript. He styles with Tailwind CSS, Bootstrap and Shadcn UI with a focus on responsive design, and uses TanStack Query for data fetching. He optimizes performance with code splitting, Lighthouse auditing and client-side caching.`,
     sources: ["Resume - Frontend Development Skills"],
   },
 
   backend: {
-    answer: `While primarily a front-end developer, Sushil has experience with Backend-as-a-Service platforms. He works extensively with Supabase (PostgreSQL, Row Level Security, Authentication, Migrations) and Firebase. He is currently expanding into full-stack development with Supabase backend integration. His projects demonstrate proficiency in API integration, including REST APIs and AI/ML APIs from OpenAI and Replicate.\n\nFor more details, contact Sushil at +91 7892808101 (WhatsApp available).`,
+    answer: `While primarily a front-end developer, Sushil works with Backend-as-a-Service platforms: Supabase (Auth, Database) and Firebase, plus Clerk for authentication. He integrates REST APIs, the WhatsApp Cloud API, Google Calendar and Sheets APIs, and AI/LLM APIs, and builds Next.js API routes for his WhatsApp agents.\n\nFor more details, contact Sushil at +91 7892808101 (WhatsApp available).`,
     sources: ["Resume - Backend Skills"],
   },
 
   devops: {
-    answer: `Sushil has hands-on experience with deployment workflows, Git/GitLab version control, and cloud platforms including Supabase and Firebase. He's comfortable with CI/CD pipelines, environment configuration, and deploying full-stack applications. He's always expanding his skills and open to learning new tools based on project requirements.\n\nLet's discuss your project needs!\n📞 Call/WhatsApp: +91 7892808101\n📧 Email: sushiluideveloper@gmail.com`,
+    answer: `Sushil uses Git and GitLab for version control and works with Supabase and Firebase as managed backends. He is always open to learning new tools based on project requirements.\n\nLet's discuss your project needs!\n${CONTACT}`,
     sources: ["Resume - Technical Skills"],
   },
 
   fullstack: {
-    answer: `Yes! Sushil is a Full-stack Developer. He has 5+ years of front-end expertise with React.js, Next.js, and React Native, and is proficient in backend development using Supabase (PostgreSQL, Row Level Security, Authentication) and Firebase. He builds complete end-to-end applications including API integration, database design, and authentication systems. His projects like the Tutoring Marketplace Platform and NEEED FIT demonstrate his full-stack capabilities.\n\nLet's discuss your project!\n📞 Call/WhatsApp: +91 7892808101\n📧 Email: sushiluideveloper@gmail.com`,
+    answer: `Sushil is a front-end developer moving into full-stack work. He has 6+ years of front-end experience with React.js, Next.js and React Native, and has built two full WhatsApp agents end to end with Next.js, Supabase and the WhatsApp Cloud API, including admin dashboards, Google Calendar and Sheets sync, and AI-generated answers.\n\nLet's discuss your project!\n${CONTACT}`,
     sources: ["Resume - Professional Summary"],
   },
 
   current: {
-    answer: `Sushil is currently working as a Front-end Developer at FLOOID (Remote) since August 2023. In this role, he leads front-end development for enterprise platforms across fintech, PWA, government, and e-commerce sectors. He focuses on driving performance improvements and enhancing user experience while ensuring WCAG 2.1 AA accessibility compliance across all platforms.`,
+    answer: `Sushil's most recent role was Front-end Developer at Keuro Health and Technology LLP (September 2024 - September 2026), where he worked on the Riyaah e-commerce and OMS projects. He is now open to new opportunities in front-end and full-stack roles.\n\n${CONTACT}`,
     sources: ["Resume - Current Position"],
   },
 
+  keuro: {
+    answer: `At Keuro Health and Technology LLP (Keuro Digital, September 2024 - September 2026, Hybrid), Sushil continued the Riyaah and OMS projects after they transitioned from FLOOID. Riyaah is a multi-language e-commerce platform with Algolia-powered search and full English and Arabic support. OMS is an admin panel for managing high-volume orders, the product catalog, dynamic banners and inventory. He also improved accessibility to WCAG 2.1 AA across the platforms.`,
+    sources: ["Resume - Keuro Experience"],
+  },
+
   flooid: {
-    answer: `At FLOOID (August 2023 - Present), Sushil leads front-end development for enterprise platforms. His key projects include: Riyaah Ecommerce (multi-language e-commerce with Algolia search supporting English and Arabic), OMS Order Management (admin panel for high-volume orders and inventory), EV-Ready India (interactive dashboards for government stakeholders), HerKey PWA (Progressive Web App for women professionals with offline-first architecture), and Centrum Wealth (fintech platform for real-time investment tracking). He improved web accessibility to WCAG 2.1 AA standards across all platforms.`,
+    answer: `At FLOOID (Remote, August 2023 - August 2024), Sushil worked on Centrum Wealth (a fintech platform for real-time investment tracking and portfolio analytics), HerKey PWA (an offline-first Progressive Web App for women professionals) and EV-Ready India (interactive dashboards for government stakeholders).`,
     sources: ["Resume - FLOOID Experience"],
   },
 
   cloudberry: {
-    answer: `At Cloudberry360 (September 2021 - July 2023), Sushil worked on the Apexx payment system dashboard using React.js, processing high-volume monthly transactions. He built an extensive library of reusable React components used across multiple projects, improved website performance achieving excellent Lighthouse scores, and delivered responsive, cross-browser compatible websites. He collaborated closely with designers to convert Figma wireframes into pixel-perfect code.`,
+    answer: `At Cloudberry360 (September 2021 - July 2023), Sushil worked on the Apexx payment system dashboard in React.js for high-volume monthly transactions. He built a library of reusable React components used across projects, improved website performance and Lighthouse scores, delivered responsive cross-browser websites, and converted Figma designs into pixel-accurate code.`,
     sources: ["Resume - Cloudberry360 Experience"],
   },
 
   nvest: {
-    answer: `At NVEST (September 2019 - July 2021), Sushil developed a Chrome browser extension for Ethereum transactions. He enhanced the user interface for complex crypto transactions, reducing user error rates. He ensured smooth integration with Ethereum blockchain and multiple DApps, implemented secure private key storage using AES encryption, and integrated multi-cryptocurrency payment systems supporting Bitcoin, Ethereum, and other cryptocurrencies with real-time exchange rates via WebSocket APIs.`,
+    answer: `At NVEST (September 2019 - July 2021), Sushil developed a Chrome browser extension for Ethereum transactions. He improved the interface for complex crypto transactions, integrated with the Ethereum blockchain and multiple DApps, implemented secure private key storage using AES encryption, and integrated multi-cryptocurrency payments with real-time exchange rates over WebSocket APIs.`,
     sources: ["Resume - NVEST Experience"],
   },
 
   crypto: {
-    answer: `Sushil has significant cryptocurrency and blockchain experience from his time at NVEST. He developed a Chrome browser extension for seamless Ethereum transactions, integrated with multiple DApps, implemented secure private key storage and recovery using AES encryption, and built multi-cryptocurrency payment systems supporting Bitcoin, Ethereum, and various other cryptocurrencies. He also implemented real-time exchange rate updates via WebSocket APIs.`,
+    answer: `Sushil gained cryptocurrency and blockchain experience at NVEST. He developed a Chrome browser extension for Ethereum transactions, integrated it with multiple DApps, implemented secure private key storage and recovery using AES encryption, and built multi-cryptocurrency payments (Bitcoin, Ethereum and others) with real-time exchange rates over WebSocket APIs.`,
     sources: ["Resume - Crypto Experience"],
   },
 
   accessibility: {
-    answer: `Sushil is experienced in web accessibility standards. He follows WCAG 2.1 AA guidelines and implements ARIA roles for better screen reader support. At FLOOID, he improved web accessibility compliance across all platforms, expanding user reach and ensuring inclusive design practices. He is committed to making web applications accessible to all users.`,
+    answer: `Sushil follows WCAG 2.1 AA guidelines and uses ARIA roles for better screen reader support. At Keuro he improved accessibility across platforms, expanding reach and supporting inclusive design.`,
     sources: ["Resume - Accessibility"],
   },
 
   testing: {
-    answer: `Sushil has experience with testing frameworks including Jest and React Testing Library. He uses these tools to ensure code quality and reliability in his projects. He follows best practices for unit testing and component testing in React applications.`,
+    answer: `Sushil has experience with Jest and React Testing Library for unit and component testing in React applications.`,
     sources: ["Resume - Testing Skills"],
   },
 
   agile: {
-    answer: `Sushil is dedicated to Agile team collaboration and follows Scrum methodologies. He has experience working cross-functionally with design and backend teams, consistently delivering feature releases on schedule with high quality standards. He values iterative development and continuous improvement.`,
+    answer: `Sushil works in Agile and Scrum teams, collaborating with design and backend teams and delivering releases on schedule.`,
     sources: ["Resume - Methodologies"],
   },
 
   location: {
-    answer: `Sushil Sharma is currently located in Chennai, India. His permanent address is in Guwahati, Assam, India (PIN: 781020). He currently works remotely for FLOOID and has previously worked in Bengaluru, India at Cloudberry360 and NVEST.`,
+    answer: `Sushil Sharma is based in Guwahati, Assam, India (PIN 781020). He has worked remotely and in hybrid setups, and previously in Bengaluru at Cloudberry360 and NVEST.`,
     sources: ["Resume - Location"],
   },
 
   hire: {
-    answer: `Sushil Sharma is an experienced Front-end Developer with 5+ years of expertise in React.js, Next.js, and React Native. He has delivered enterprise-level projects for fintech, e-commerce, and government sectors. To discuss opportunities, you can contact him at sushiluideveloper@gmail.com or +91-7892808101, or connect on LinkedIn: sushilsharma-ui-developer.`,
+    answer: `Sushil Sharma is a Front-end Developer with 6+ years of experience in React.js, Next.js and React Native, and has delivered projects for fintech, e-commerce and government sectors. He is open to full-time, contract and freelance work. Contact him at sushiluideveloper@gmail.com or +91-7892808101, or connect on LinkedIn: linkedin.com/in/sushil-sharma-ui-developer.`,
     sources: ["Resume - Contact & Summary"],
   },
 
   strengths: {
-    answer: `Sushil's key strengths include: expertise in React ecosystem (React.js, Next.js, React Native), strong focus on performance optimization and accessibility (WCAG 2.1 AA), experience with complex integrations (payment gateways, blockchain, AI/ML APIs), ability to deliver enterprise-level applications, and dedication to Agile collaboration and code quality. He has successfully delivered projects across fintech, e-commerce, government, and SaaS sectors.`,
+    answer: `Sushil's strengths include deep experience in the React ecosystem (React.js, Next.js, React Native), a strong focus on performance and accessibility (WCAG 2.1 AA), complex integrations (payments, blockchain, WhatsApp Cloud API, AI/LLM APIs), and Agile collaboration. He has delivered projects across fintech, e-commerce, government and SaaS.`,
     sources: ["Resume - Professional Summary"],
   },
 
   default: {
-    answer: `I don't have specific information about that topic. However, you can reach out to Sushil directly for more details!\n\n📞 Call/WhatsApp: +91 7892808101\n📧 Email: sushiluideveloper@gmail.com\n\nOr ask me about his skills, work experience, projects, education, or contact information.`,
+    answer: `I don't have specific information about that topic. However, you can reach out to Sushil directly for more details!\n\n${CONTACT}\n\nOr ask me about his skills, work experience, projects, education, or contact information.`,
     sources: ["Assistant"],
   },
 };
@@ -127,9 +144,11 @@ export function getPrecachedAnswer(question) {
     { match: /full.?stack|fullstack/i, key: "fullstack" },
 
     // Specific Technologies (check these before general skills)
+    { match: /whatsapp|chatbot|chat.?bot|appointment|booking|institute|enquiry/i, key: "whatsapp" },
+    { match: /\bai\b|llm|openai|gpt|vercel ai|tanstack ai|prompt|cursor|codex|claude/i, key: "ai" },
     { match: /devops|ci\/cd|docker|kubernetes|jenkins|aws|azure|gcp|cloud|deploy|infrastructure/i, key: "devops" },
     { match: /supabase|firebase|backend|database|server|postgres/i, key: "backend" },
-    { match: /react|next\.?js|javascript|html|css|tailwind|frontend|front-end/i, key: "frontend" },
+    { match: /react|next\.?js|javascript|typescript|html|css|tailwind|frontend|front-end/i, key: "frontend" },
     { match: /test|jest|testing/i, key: "testing" },
     { match: /access|wcag|aria|screen.?reader|inclusive/i, key: "accessibility" },
     { match: /payment|razorpay|stripe|transaction|pay/i, key: "payments" },
@@ -137,12 +156,14 @@ export function getPrecachedAnswer(question) {
 
     // Experience (check before general skills)
     { match: /experience|work|job|career|history|years|how long/i, key: "experience" },
-    { match: /flooid|current|now|present|today|working|remote/i, key: "flooid" },
+    { match: /keuro|riyaah|oms/i, key: "keuro" },
+    { match: /flooid|herkey|centrum|ev.?ready/i, key: "flooid" },
+    { match: /current|now|present|today|working|remote/i, key: "current" },
     { match: /cloudberry|apexx/i, key: "cloudberry" },
     { match: /nvest|chrome.?extension/i, key: "nvest" },
 
     // Projects
-    { match: /project|built|develop|create|portfolio|riyaah|herkey|centrum|tutoring|neeed.?fit/i, key: "projects" },
+    { match: /project|built|develop|create|portfolio/i, key: "projects" },
 
     // Personal Info
     { match: /education|degree|college|university|study|qualification|mca|bca/i, key: "education" },

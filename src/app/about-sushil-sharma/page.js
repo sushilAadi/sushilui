@@ -1,14 +1,14 @@
 export const metadata = {
-  title: "About Sushil Sharma | Senior Frontend Developer | React, Next.js & BaaS Engineer",
+  title: "About Sushil Sharma | Front-end Developer | React, Next.js & WhatsApp Agents",
   description:
-    "Sushil Sharma is a Senior Frontend Developer with 6+ years of experience in React, Next.js, TypeScript, Supabase, and Firebase. Available for hire as a frontend architect and BaaS specialist.",
+    "Sushil Sharma is a Front-end Developer with 6+ years of experience in React, Next.js, React Native and Supabase, and builds WhatsApp Cloud API agents. Available for hire.",
   alternates: {
     canonical: "https://sushildev.vercel.app/about-sushil-sharma",
   },
   openGraph: {
-    title: "About Sushil Sharma | Senior Frontend Developer",
+    title: "About Sushil Sharma | Front-end Developer",
     description:
-      "Senior Frontend Developer with 6+ years of experience specializing in React, Next.js, Supabase, Firebase, and scalable BaaS architectures.",
+      "Front-end Developer with 6+ years of experience specializing in React, Next.js and React Native, with WhatsApp Cloud API agents built on Supabase.",
     url: "https://sushildev.vercel.app/about-sushil-sharma",
     type: "profile",
   },
@@ -20,22 +20,21 @@ const profileJsonLd = {
   mainEntity: {
     "@type": "Person",
     name: "Sushil Sharma",
-    jobTitle: "Senior Frontend Developer",
+    jobTitle: "Front-end Developer",
     url: "https://sushildev.vercel.app",
     email: "sushiluideveloper@gmail.com",
     description:
-      "Senior Frontend Developer with 6+ years of experience building scalable web applications using React, Next.js, Supabase, Firebase, and modern BaaS architectures.",
+      "Front-end Developer with 6+ years of experience building scalable web and mobile applications using React, Next.js, React Native and Supabase, and WhatsApp Cloud API agents.",
     knowsAbout: [
       "React.js",
       "Next.js",
       "JavaScript",
-      "TypeScript",
       "Tailwind CSS",
       "Supabase",
       "Firebase",
       "Backend-as-a-Service (BaaS)",
       "REST APIs",
-      "Authentication Systems",
+      "WhatsApp Cloud API",
       "Web Performance Optimization",
     ],
     sameAs: [
@@ -60,7 +59,7 @@ export default function AboutSushilSharma() {
               Sushil Sharma
             </h1>
             <p className="text-xl md:text-2xl text-gray-600">
-              Senior Frontend Developer &mdash; React, Next.js &amp; BaaS Engineer
+              Front-end Developer &mdash; React, Next.js &amp; WhatsApp Agents
             </p>
           </header>
 
@@ -69,17 +68,17 @@ export default function AboutSushilSharma() {
               About Sushil Sharma
             </h2>
             <p className="text-lg leading-relaxed text-gray-700 mb-4">
-              Sushil Sharma is a Senior Frontend Developer with over 6 years of professional experience
-              building scalable, high-performance web applications. He specializes in React.js, Next.js,
-              TypeScript, and modern Backend-as-a-Service (BaaS) platforms including Supabase and Firebase.
+              Sushil Sharma is a Front-end Developer with over 6 years of professional experience
+              building scalable, high-performance web and mobile applications. He specializes in React.js,
+              Next.js and React Native, with full-stack work in Supabase, the WhatsApp Cloud API and AI/LLM integrations.
             </p>
             <p className="text-lg leading-relaxed text-gray-700 mb-4">
-              Throughout his career, Sushil Sharma has delivered enterprise-level projects across fintech,
-              e-commerce, and government sectors. He focuses on creating modular, maintainable frontend
-              architectures that scale with business needs.
+              Throughout his career, Sushil Sharma has delivered projects across fintech,
+              e-commerce, and government sectors, focusing on performance, accessibility (WCAG 2.1 AA)
+              and maintainable, modular interfaces.
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              Sushil Sharma is currently based in Chennai, Tamil Nadu, India and is available for
+              Sushil Sharma is based in Guwahati, Assam, India and is available for
               full-time, contract, and freelance opportunities worldwide.
             </p>
           </section>
@@ -93,41 +92,40 @@ export default function AboutSushilSharma() {
               <div>
                 <h3 className="text-lg font-semibold mb-3">Frontend Development</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>React.js and Next.js (App Router, SSR, SSG, ISR)</li>
-                  <li>TypeScript and modern JavaScript (ES6+)</li>
-                  <li>Tailwind CSS, CSS Modules, Styled Components</li>
-                  <li>GSAP and Framer Motion animations</li>
-                  <li>React Native for cross-platform mobile apps</li>
+                  <li>React.js and Next.js</li>
+                  <li>JavaScript (ES6+) and TypeScript</li>
+                  <li>Tailwind CSS, Bootstrap, Shadcn UI</li>
+                  <li>TanStack Query for data fetching</li>
+                  <li>React Native for mobile apps</li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold mb-3">Backend-as-a-Service (BaaS)</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>Supabase (Auth, Database, Realtime, Storage, Edge Functions)</li>
-                  <li>Firebase (Authentication, Firestore, Realtime Database, Cloud Functions)</li>
-                  <li>REST API design and integration</li>
-                  <li>Serverless backend architecture</li>
+                  <li>Supabase (Auth, Database)</li>
+                  <li>Firebase and Clerk</li>
+                  <li>REST APIs, WhatsApp Cloud API, Google Calendar and Sheets APIs</li>
+                  <li>AI/LLM API integration</li>
                 </ul>
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold mb-3">Authentication &amp; Security</h3>
+                <h3 className="text-lg font-semibold mb-3">Payments &amp; Authentication</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>OAuth 2.0 and JWT-based authentication</li>
-                  <li>Supabase Auth and Firebase Auth implementation</li>
-                  <li>Role-based access control (RBAC)</li>
-                  <li>Row-level security policies</li>
+                  <li>OAuth, Supabase Auth, Firebase Auth, Clerk</li>
+                  <li>Razorpay and Stripe payment flows</li>
+                  <li>Multi-cryptocurrency payments and AES key storage (NVEST)</li>
                 </ul>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold mb-3">Performance &amp; Architecture</h3>
                 <ul className="space-y-2 text-gray-700">
-                  <li>Core Web Vitals optimization</li>
-                  <li>Code splitting and lazy loading</li>
-                  <li>Component library and design system development</li>
-                  <li>CI/CD pipelines and deployment automation</li>
+                  <li>Lighthouse auditing and code splitting</li>
+                  <li>WCAG 2.1 AA accessibility and ARIA</li>
+                  <li>Reusable component libraries</li>
+                  <li>PWA and Chrome extension development</li>
                 </ul>
               </div>
             </div>
@@ -138,14 +136,14 @@ export default function AboutSushilSharma() {
               Professional Experience
             </h2>
             <p className="text-lg leading-relaxed text-gray-700 mb-4">
-              Sushil Sharma has built scalable SaaS platforms, AI-enabled applications, and
-              enterprise-grade frontend systems. His work includes designing real-time collaboration
-              features, implementing complex authentication flows, and integrating serverless backend
-              services.
+              Sushil Sharma worked at Keuro Health and Technology LLP (2024&ndash;2026) on the Riyaah
+              e-commerce platform and OMS admin panel, at FLOOID (2023&ndash;2024) on Centrum Wealth,
+              HerKey PWA and EV-Ready India, at Cloudberry360 (2021&ndash;2023) on a payment dashboard,
+              and at NVEST (2019&ndash;2021) on an Ethereum Chrome extension.
             </p>
             <p className="text-lg leading-relaxed text-gray-700">
-              He has experience leading frontend architecture decisions, mentoring junior developers,
-              and translating complex product requirements into performant, accessible user interfaces.
+              He has also built two WhatsApp agents with the WhatsApp Cloud API, Next.js and Supabase:
+              a doctor appointment system and a course enquiry and registration agent, each with an admin dashboard.
             </p>
           </section>
 
@@ -157,14 +155,12 @@ export default function AboutSushilSharma() {
               Sushil Sharma is actively open to new opportunities. He is best suited for roles including:
             </p>
             <ul className="text-lg text-gray-700 space-y-2 mb-6">
-              <li>Senior Frontend Developer</li>
+              <li>Front-end Developer</li>
               <li>React Developer</li>
               <li>Next.js Developer</li>
-              <li>Full Stack Frontend Engineer</li>
-              <li>Supabase Developer</li>
-              <li>Firebase Developer</li>
-              <li>BaaS Architect</li>
-              <li>Frontend Architect</li>
+              <li>React Native Developer</li>
+              <li>Full-stack Developer (Next.js and Supabase)</li>
+              <li>WhatsApp Cloud API Developer</li>
             </ul>
             <p className="text-lg leading-relaxed text-gray-700">
               For inquiries, reach out via email at{" "}

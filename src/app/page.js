@@ -149,7 +149,7 @@ const Home = () => {
                     width={500}
                     height={800}
                     className="object-contain w-[180px] sm:w-[280px] md:w-[380px] lg:w-[500px] h-auto"
-                    alt="Sushil Sharma - Senior Frontend Developer"
+                    alt="Sushil Sharma - Front-end Developer"
                     priority
                   />
                 </motion.div>

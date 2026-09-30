@@ -29,7 +29,7 @@ const Testimonial = () => {
       </div>
 
       {/* MAIN CONTENT */}
-      <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col overflow-hidden">
+      <div className="flex-1 p-4 sm:p-6 lg:p-8 flex flex-col overflow-clip">
         <div ref={headerRef} className="flex flex-col lg:flex-row gap-4 items-start container mx-auto">
           {/* Animated sparkle + label */}
           <motion.div
@@ -74,10 +74,10 @@ const Testimonial = () => {
 
         {/* 50/50 Split Layout - Responsive */}
         <section className="my-8 container mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
             {/* Left Part - Heading/Content (50%) */}
 
-            <div className="flex items-center justify-center">
+            <div className="flex items-center justify-center lg:sticky lg:top-[20vh]">
               <TestimonialsEditorial />
             </div>
 

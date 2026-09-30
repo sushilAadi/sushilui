@@ -72,7 +72,7 @@ export default function ClientSideLayout({ children }) {
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
               <div className="text-center md:text-left">
                 <p className="text-lg font-semibold">Sushil Sharma</p>
-                <p className="text-sm text-gray-400">Senior Frontend Developer</p>
+                <p className="text-sm text-gray-400">Front-end Developer</p>
               </div>
               <nav aria-label="Footer links" className="flex flex-wrap justify-center gap-6 text-sm text-gray-400">
                 <a href="https://sushildev.vercel.app" className="hover:text-white transition-colors">Portfolio</a>

@@ -30,7 +30,7 @@ export default function TestimonialsEditorial() {
   const current = testimonials[active]
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-6 py-16">
+    <div className="w-full max-w-2xl mx-auto px-6 py-4">
       {/* Large index number */}
       <div className="flex items-start gap-8">
         <span
