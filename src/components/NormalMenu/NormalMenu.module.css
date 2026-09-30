@@ -232,6 +232,18 @@
   opacity: 0.7;
 }
 
+/* The large decorative header text must never block clicks on the links above it */
+.header,
+.header h1,
+.headerChar {
+  pointer-events: none;
+}
+
+.socials {
+  position: relative;
+  z-index: 2;
+}
+
 /* Header Text */
 .header h1 {
   color: #fff;
